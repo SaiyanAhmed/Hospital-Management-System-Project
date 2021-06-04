@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Patient Appointment</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="images/icons/icon-03.png"/>
+    <link rel="stylesheet" href="main.css">
+     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->  
+  <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="css/util.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+  <style>
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-image: url("https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  }
+
+  .nav-back{
+      background: rgba(17, 219, 207,0.8);
+      color: #fff;
+  }
+  .navbar-brand{
+    color: #000;
+  }
+  .navbar-brand:hover{
+    color: #fff;
+  }
+  .nav-link{
+    color: #000;
+  }
+  .nav-link:hover{
+    color:#fff;
+  }
+  .navbar-toggler{
+    outline: none!important;
+  }
+  
+  
+  #hero {
+      width: 100%;
+      height: 80vh;
+      background: url("./images/hero.jpg") center center;
+      background-size: cover;
+      position: relative;
+    }
+    
+    #hero .container {
+      padding-top: 80px;
+    }
+    
+    #hero:before {
+      content: "";
+      background: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+    
+    #hero h1 {
+      margin: 0 0 10px 0;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 56px;
+      color: #fff;
+    }
+    
+    #hero h2 {
+      color: #eee;
+      margin-bottom: 40px;
+      font-size: 15px;
+      font-weight: 500;
+      font-family: "Open Sans", sans-serif;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    
+    .main-btn {
+      font-family: "Poppins", sans-serif;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 1px;
+      display: inline-block;
+      padding: 8px 28px;
+      border-radius: 50px;
+      transition: 0.5s;
+      margin: 10px;
+      border: 2px solid #fff;
+      color: #fff;
+    }
+    
+     .main-btn:hover {
+      background: #11dbcf;
+      border: 2px solid #11dbcf;
+      text-decoration: none;
+      color:#fff;
+    }
+   .form-group .btn-form{
+    background: #11dbcf;
+    border: 2px solid #11dbcf;
+    text-decoration: none;
+    color:#000;
+   }
+ 
+      form {
+      width: 150%;
+      padding: 60px;
+      border-radius: 6px;
+      background: #fff;
+      box-shadow: 0 0 8px  #669999;
+      background-image: url("https://cdn.dribbble.com/users/31963/screenshots/5482976/doctor.png?compress=1&resize=800x600");
+      }
+      
+    </style>
+  </head>
+  <body>
+  <div class="container mt-4 p-4">
+      <div class="row">
+          <div class="col-md-6">
+            <form action="appointment.php" method="POST">
+              <h2 class="text-center my-4">
+                  Patient Appointment
+              </h2>
+              <br><br>
+
+                  <div class="form-group row">
+                      <label class="col-sm-4 col-lg-4">
+                          Patient Name
+                      </label>
+                      <div class="col-sm-8 col-lg-8">
+                          <input type="text"id="name"class="form-control" name="name"
+                          placeholder="ex: Saiyan Ahmed"required>
+                      </div>
+                  </div>
+
+                  <div class="form-group row">
+                      <label class="col-sm-4 col-lg-4">
+                          Patient Gender
+                      </label>
+                      <div class="col-sm-8 col-lg-8">
+                          <input type="radio" id="gender" name="gender" value="Male">
+                          <label for="vehicle1"> Male</label><br>
+                          <input type="radio" id="gender" name="gender" value="Female">
+                          <label for="vehicle2"> Female</label><br>
+                          <input type="radio" id="gender" name="gender" value="Others">
+                          <label for="vehicle2"> Others</label><br>
+                      </div>
+                  </div>
+
+                   <div class="form-group row">
+                      <label class="col-sm-4 col-lg-4">
+                          Patient Blood Group
+                      </label>
+                      <div class="col-sm-8 col-lg-8">
+                          <input type="text"id="blood"class="form-control" name="blood"
+                          placeholder="ex: O+/O-"required>
+                      </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label class="col-sm-4 col-lg-4">
+                        Patient Birth Date
+                    </label>
+                    <div class="col-sm-8 col-lg-8">
+                        <input type="date"id="bdate"class="form-control" name="bdate"required>
+                    </div>
+                  </div>
+                  
+                  <div class="form-group row">
+                    <label class="col-sm-4 col-lg-4">
+                        Contact Number
+                    </label>
+                    <div class="col-sm-8 col-lg-8">
+                        <input type="tel"id="contact"class="form-control" name="contact"
+                        placeholder="+880"required>
+                    </div>
+                  </div>
+            
+                <div class="form-group row">
+                    <label class="col-sm-4 col-lg-4">
+                      Appointment Date
+                    </label>
+                    <div class="col-sm-8 col-lg-8">
+                        <input type="date"id="date"class="form-control" name="date">
+                    </div>
+                </div>
+                <!---->
+                <div class="form-group row">
+                    <label class="col-sm-4 col-lg-4">
+                       Appointment Time
+                    </label>
+                    <div class="col-sm-8 col-lg-8">
+                        <input type="time"id="time"class="form-control" name="time">
+                       </div>
+                </div>
+                <!---->
+                <div class="form-group row">
+                    <label class="col-sm-4 col-lg-4">
+                       Symptoms
+                    </label>
+                    <div class="col-sm-8 col-lg-8">
+                        <textarea id="symptoms" class="form-control" name="symptoms"required></textarea>
+                    </div>
+                </div>
+                <div class="form-group row justify-content-end">
+                    <div class="container-login100-form-btn">
+                        <button type="submit"class="login100-form-btn">
+                            Make Appointment
+                        </button>
+                    </div>
+                </div>
+              </form>
+  </body>
+</html>
